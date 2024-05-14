@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userInputs">
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    <p id="output"></p>
+    
+</form>
+    <script>
+       var userName = [];
+
+        
+        function add(){
+            var contact = document.getElementById("userInputs");
+            var name = contact.value;
+        
+            if (userName.length >= 7) {
+            userName.shift();
+            }
+            
+            userName.push(name);
+            document.getElementById("output").innerHTML = userName;
+        }
+
+        function remove(){
+            userName.pop();
+            document.getElementById("output").innerHTML = userName;
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
